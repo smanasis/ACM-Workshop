@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bp3wm30il3amc"]
+
+[ext_resource type="Script" uid="uid://msk7sokpnoio" path="res://Scripts/chest.gd" id="1_cjfl1"]
+[ext_resource type="Texture2D" uid="uid://2l8wl5c0x0ib" path="res://Assets/BigTreasureChest.png" id="1_lyb87"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjfl1"]
+size = Vector2(12, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bagqn"]
+size = Vector2(20, 13)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=348212354]
+texture_filter = 1
+scale = Vector2(2, 2)
+script = ExtResource("1_cjfl1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2064774934]
+texture = ExtResource("1_lyb87")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1417949526]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_cjfl1")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1630106059]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=733627431]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_bagqn")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

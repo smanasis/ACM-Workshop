@@ -113,6 +113,7 @@ distance = -114.0
 
 [node name="main_world" type="Node2D" unique_id=1061168455]
 script = ExtResource("1_de105")
+scene_to_instantiate = ExtResource("4_xvpw4")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1620405423]
 texture_filter = 1

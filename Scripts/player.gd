@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+#hello world
+
 @export var speed:float = 100.0
 @onready var animation_handle = $AnimationPlayer #before even the ready funxtion execute, we define var 
 												 #animation_handle shows the path to the animationPlayer Node
